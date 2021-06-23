@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Extensions.Configuration;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,10 +9,11 @@ namespace BD
 {
     public class DataAccess
     {
-        public DataAccess()
+        private readonly IConfiguration config;
+
+        public DataAccess(IConfiguration _config)
         {
-
-
+            config = _config;
         }
     }
 }
