@@ -9,8 +9,7 @@
     <ProjectGuid>{3ef81e9b-74bc-48e8-b32c-03af6927ff53}</ProjectGuid>
     <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
     <OutputType>Database</OutputType>
-    <RootPath>
-    </RootPath>
+    <RootPath />
     <RootNamespace>BaseDatos</RootNamespace>
     <AssemblyName>BaseDatos</AssemblyName>
     <ModelCollation>1033, CI</ModelCollation>
@@ -48,7 +47,6 @@
   </PropertyGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
-    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
     <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
     <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
   </PropertyGroup>
@@ -56,5 +54,11 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
+    <Folder Include="dbo" />
+    <Folder Include="dbo\StoreProcedures" />
+    <Folder Include="dbo\Tables" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\Table1.sql" />
   </ItemGroup>
 </Project>
