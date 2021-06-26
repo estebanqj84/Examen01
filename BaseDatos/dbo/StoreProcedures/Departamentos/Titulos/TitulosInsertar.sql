@@ -1,6 +1,35 @@
 ﻿CREATE PROCEDURE [dbo].[TitulosInsertar]
-	@param1 int = 0,
-	@param2 int
+	@Descripcion VARCHAR(250),
+	@Estado BIT
 AS
-	SELECT @param1, @param2
-RETURN 0
+ BEGIN
+   SET NOCOUNT ON
+   BEGIN TRANSACTION TRASA
+
+   BEGIN TRY 
+
+   INSERT INTO Titulos 
+   (
+      Descripcion
+	, Estado)
+   VALUES
+   (
+     @Descripcion
+	,@Estado
+   )
+
+   COMMIT TRANSACTION TRASA
+
+     SELECT 0 AS CodeError, '' AS MsgError
+
+   END TRY
+
+   BEGIN CATCH
+     SELECT 
+	     ERROR_NUMBER() AS CodeError
+	   , ERROR_MESSAGE() AS MsgError
+
+	   ROLLBACK TRANSACTION TRASA
+   END CATCH
+
+ END

@@ -1,6 +1,15 @@
 ﻿CREATE PROCEDURE [dbo].[PuestosObtener]
-	@param1 int = 0,
-	@param2 int
+	@Id_Puesto INT= NULL
 AS
-	SELECT @param1, @param2
-RETURN 0
+	BEGIN 
+	SET NOCOUNT ON
+
+	SELECT
+		@Id_Puesto
+	  , Nombre
+	  , Salario
+	    Estado
+	FROM Puestos
+	WHERE (@Id_Puesto IS NULL OR @Id_Puesto=@Id_Puesto)
+
+	END
