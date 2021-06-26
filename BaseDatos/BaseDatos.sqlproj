@@ -59,6 +59,8 @@
     <Folder Include="dbo\Tables" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="dbo\Tables\Table1.sql" />
+    <Build Include="dbo\Tables\Titulos.sql" />
+    <Build Include="dbo\Tables\Puestos.sql" />
+    <Build Include="dbo\Tables\Departamentos.sql" />
   </ItemGroup>
 </Project>
