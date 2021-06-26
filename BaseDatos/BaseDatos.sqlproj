@@ -58,20 +58,24 @@
     <Folder Include="dbo\StoreProcedures" />
     <Folder Include="dbo\Tables" />
     <Folder Include="dbo\StoreProcedures\Departamentos" />
-    <Folder Include="dbo\StoreProcedures\Departamentos\Puestos" />
-    <Folder Include="dbo\StoreProcedures\Departamentos\Titulos" />
+    <Folder Include="dbo\StoreProcedures\Titulos" />
+    <Folder Include="dbo\StoreProcedures\Puestos" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\Titulos.sql" />
     <Build Include="dbo\Tables\Puestos.sql" />
     <Build Include="dbo\Tables\Departamentos.sql" />
-    <Build Include="dbo\StoreProcedures\Departamentos\Puestos\PuestosObtener.sql" />
-    <Build Include="dbo\StoreProcedures\Departamentos\Puestos\PuestosInsertar.sql" />
-    <Build Include="dbo\StoreProcedures\Departamentos\Puestos\PuestosEliminar.sql" />
-    <Build Include="dbo\StoreProcedures\Departamentos\Puestos\PuestosActualizar.sql" />
-    <Build Include="dbo\StoreProcedures\Departamentos\Titulos\TitulosObtener.sql" />
-    <Build Include="dbo\StoreProcedures\Departamentos\Titulos\TitulosInsertar.sql" />
-    <Build Include="dbo\StoreProcedures\Departamentos\Titulos\TitulosEliminar.sql" />
-    <Build Include="dbo\StoreProcedures\Departamentos\Titulos\TitulosActualizar.sql" />
+    <Build Include="dbo\StoreProcedures\Titulos\TitulosActualizar.sql" />
+    <Build Include="dbo\StoreProcedures\Titulos\TitulosEliminar.sql" />
+    <Build Include="dbo\StoreProcedures\Titulos\TitulosInsertar.sql" />
+    <Build Include="dbo\StoreProcedures\Titulos\TitulosObtener.sql" />
+    <Build Include="dbo\StoreProcedures\Puestos\PuestosActualizar.sql" />
+    <Build Include="dbo\StoreProcedures\Puestos\PuestosEliminar.sql" />
+    <Build Include="dbo\StoreProcedures\Puestos\PuestosInsertar.sql" />
+    <Build Include="dbo\StoreProcedures\Puestos\PuestosObtener.sql" />
+    <Build Include="dbo\StoreProcedures\Departamentos\DepartamentosObtener.sql" />
+    <Build Include="dbo\StoreProcedures\Departamentos\DepartamentosInsertar.sql" />
+    <Build Include="dbo\StoreProcedures\Departamentos\DepartamentosEliminar.sql" />
+    <Build Include="dbo\StoreProcedures\Departamentos\DepartamentosActualizar.sql" />
   </ItemGroup>
 </Project>
