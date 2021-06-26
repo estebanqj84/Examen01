@@ -25,6 +25,7 @@ namespace Examen01
         {
             services.AddRazorPages().AddJsonOptions(option =>
             {
+                services.AddDIContainer();
                 option.JsonSerializerOptions.DictionaryKeyPolicy = null;
                 option.JsonSerializerOptions.PropertyNamingPolicy = null;
             });

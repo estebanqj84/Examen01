@@ -1,0 +1,62 @@
+﻿@page
+@model WebApp.Pages.Departamentos.GridModel
+@{
+}
+
+<div class="container">
+
+    <div class="card">
+        <div class="card-header">
+            Departamentos
+        </div>
+        <div class="card-body">
+            <a class="btn btn-outline-primary" asp-page="Edit"><i class='bx bx-add-to-queue'></i></a>
+
+            <div class="row">
+
+                <div class="col-12">
+                    <table id="GridView" class="table table-bordered table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Descripcion</th>
+                                <th>Ubicacion</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @foreach (var item in Model.GridList)
+                            {
+                                <tr>
+                                    <td>@item.IdDepartamento</td>
+                                    <td>@item.Descripcion</td>
+                                    <td>@(item.Estado ? "Activo": "Inactivo")</td>
+                                    <td>
+                                        <a class="btn btn-outline-primary" asp-page="Edit" asp-route-id="@item.MarcaVehiculoId"><i class='bx bxs-edit'></i></a>
+                                        <a class="btn btn-outline-primary" onclick="MarcaVehiculoGrid.OnClickEliminar(@item.MarcaVehiculoId)"><i class='bx bx-trash'></i></a>
+                                    </td>
+
+
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+
+    <script>
+        var MensajeApp = "@Html.Raw(Model.Mensaje)";
+    </script>
+
+    <script defer src="~/App/MarcaVehiculo/Grid.js"></script>
+
+}

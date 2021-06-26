@@ -8,7 +8,16 @@ using System.Threading.Tasks;
 
 namespace WBL
 {
-    public class TitulosService
+    public interface ITitulosService
+    {
+        Task<DBEntity> Create(TitulosEntity entity);
+        Task<DBEntity> Delete(TitulosEntity entity);
+        Task<IEnumerable<TitulosEntity>> Get();
+        Task<TitulosEntity> GetById(TitulosEntity entity);
+        Task<DBEntity> Update(TitulosEntity entity);
+    }
+
+    public class TitulosService : ITitulosService
     {
         private readonly IDataAccess sql;
 
