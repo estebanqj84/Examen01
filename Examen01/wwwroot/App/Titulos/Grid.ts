@@ -1,0 +1,5 @@
+﻿namespace TitulosGrid {
+
+    $("#GridView").DataTable();
+
+}

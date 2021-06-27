@@ -6,7 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="wwwroot\App\Titulo\Grid.ts" />
+    <Content Remove="wwwroot\App\Departamentos\Grid.ts" />
+    <Content Remove="wwwroot\App\Titulos\Grid.ts" />
   </ItemGroup>
 
   <ItemGroup>
@@ -19,7 +20,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <TypeScriptCompile Include="wwwroot\App\Titulo\Grid.ts" />
+    <TypeScriptCompile Include="wwwroot\App\Departamentos\Grid.ts" />
+    <TypeScriptCompile Include="wwwroot\App\Titulos\Grid.ts" />
   </ItemGroup>
 
 </Project>

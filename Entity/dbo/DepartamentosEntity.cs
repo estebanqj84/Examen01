@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entity
 {
-    public class DepartamentosEntity: EN // herencia
+    public class DepartamentosEntity // herencia
     {
         public int? Id_Departamento { get; set; }
 
@@ -14,6 +14,6 @@ namespace Entity
 
         public string Ubicacion { get; set; }
 
-        public int? Estado { get; set; }
+        public bool Estado { get; set; }
     }
 }

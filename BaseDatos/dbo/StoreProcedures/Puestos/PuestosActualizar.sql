@@ -14,7 +14,7 @@ AS
 
    UPDATE Puestos
    SET 
-   Id_Puesto=@Id_Puesto,
+   
    Nombre=@Nombre,
    Salario=@Salario,
    Estado=@Estado

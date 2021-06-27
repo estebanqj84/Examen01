@@ -14,7 +14,7 @@ AS
 
    UPDATE Departamentos
    SET 
-   Id_Departamento=@Id_Departamento,
+   
    Descripcion=@Descripcion,
    Ubicacion=@Ubicacion,
    Estado=@Estado

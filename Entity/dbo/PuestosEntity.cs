@@ -11,6 +11,6 @@ namespace Entity
         public int? Id_Puesto { get; set; }
         public string Nombre { get; set; }
         public int? Salario { get; set; }
-        public int? Estado { get; set; }
+        public bool  Estado { get; set; }
     }
 }
