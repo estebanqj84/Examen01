@@ -72,7 +72,7 @@ namespace WBL
             {
                 var result = sql.ExecuteAsync("DepartamentosInsertar", new
                 {
-                    entity.Id_Departamento,
+         
                     entity.Descripcion,
                     entity.Ubicacion,
                     entity.Estado
@@ -118,7 +118,7 @@ namespace WBL
         {
             try
             {
-                var result = sql.ExecuteAsync("DepartamentoEliminar", new
+                var result = sql.ExecuteAsync("DepartamentosEliminar", new
                 {
                     entity.Id_Departamento
 

@@ -2,6 +2,7 @@
 @model WebApp.Pages.Titulos.GridModel
 @{
 }
+
 <div class="container">
 
     <div class="card">
@@ -17,7 +18,7 @@
                     <table id="GridView" class="table table-bordered table-striped table-hover">
                         <thead>
                             <tr>
-                                <th>Id_Titulo</th>
+                                <th>Id</th>
                                 <th>Descripcion</th>
                                 <th>Estado</th>
                             </tr>
@@ -29,10 +30,17 @@
                                 <tr>
                                     <td>@item.Id_Titulo</td>
                                     <td>@item.Descripcion</td>
-                                    <td>(@item.Estado ? "Activo": "Inactivo")</td>
+                                    <td>@(item.Estado ? "Activo": "Inactivo")</td>
                                     <td>
-                                        <a class="btn btn-outline-primary" asp-page="Edit" asp-route-id="@item.Id_Titulo"><i class='bx bxs-edit'></i></a>
-                                        <a class="btn btn-outline-primary" onclick="TitulosGrid.OnClickEliminar(@item.Id_Titulo)"><i class='bx bx-trash'></i></a>
+                                        <a class="btn btn-outline-primary" asp-page="Edit" asp-route-id="@item.Id_Titulo">
+                                            <i class='bx bxs-edit'></i>
+                                        </a>
+
+                                        <button type="button" class="btn btn-outline-primary"
+                                                onclick="TitulosGrid.OnClickEliminar(@item.Id_Titulo)">
+                                            <i class='bx bx-trash'></i>
+                                        </button>
+
                                     </td>
 
 
@@ -50,9 +58,11 @@
 </div>
 
 @section Scripts{
-    
-    
 
+
+    <script>
+        var MensajeApp = "@Html.Raw(Model.Mensaje)";
+    </script>
 
     <script defer src="~/App/Titulos/Grid.js"></script>
 

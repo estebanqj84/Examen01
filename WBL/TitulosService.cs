@@ -72,7 +72,7 @@ namespace WBL
             {
                 var result = sql.ExecuteAsync("TitulosInsertar", new
                 {
-                    entity.Id_Titulo,
+                    
                     entity.Descripcion,
                     entity.Estado
                 });

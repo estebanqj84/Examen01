@@ -19,13 +19,21 @@ namespace WebApp.Pages.Departamentos
         }
 
         public IEnumerable<DepartamentosEntity> GridList { get; set; } = new List <DepartamentosEntity>();
-        public string Mensaje { get;  set; }
+
+        public string Mensaje { get; set; } = "";
 
         public async Task<IActionResult> OnGet()
         {
             try
             {
                 GridList = await departamentosService.Get();
+
+                if (TempData.ContainsKey("Msg"))
+                {
+                    Mensaje = TempData["Msg"] as string;
+                }
+
+                TempData.Clear();
 
                 return Page();
             }

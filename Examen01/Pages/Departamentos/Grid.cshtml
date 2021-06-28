@@ -26,20 +26,27 @@
                         </thead>
                         <tbody>
 
-                            @foreach (var item in Model.GridList)
-                            {
-                            <tr>
-                                <td>@item.Id_Departamento</td>
-                                <td>@item.Descripcion</td>
-                                <td>@item.Ubicacion</td>
-                                <td>@(item.Estado ? "Activo": "Inactivo")</td>
-                                <td>
-                                    <a class="btn btn-outline-primary" asp-page="Edit" asp-route-id="@item.Id_Departamento"><i class='bx bxs-edit'></i></a>
-                                    <a class="btn btn-outline-primary" onclick="DepartamentosGrid.OnClickEliminar(@item.Id_Departamento)"><i class='bx bx-trash'></i></a>
-                                </td>
+                            @foreach (var item in Model.GridList) { 
+                            
+                                <tr>
+                                    <td>@item.Id_Departamento</td>
+                                    <td>@item.Descripcion</td>
+                                    <td>@item.Ubicacion</td>
+                                    <td>@(item.Estado ? "Activo": "Inactivo")</td>
+                                    <td>
+                                        <a class="btn btn-outline-primary" asp-page="Edit" asp-route-id="@item.Id_Departamento">
+                                            <i class='bx bxs-edit'></i>
+                                        </a>
+
+                                        <button type="button" class="btn btn-outline-primary"
+                                                 onclick="DepartamentosGrid.OnClickEliminar(@item.Id_Departamento)">
+                                            <i class='bx bx-trash'></i>
+                                        </button>
+
+                                    </td>
 
 
-                            </tr>
+                                </tr>
                             }
 
                         </tbody>
@@ -53,6 +60,10 @@
 </div>
 
 @section Scripts{
+
+    <script>
+        var MensajeApp = "@Html.Raw(Model.Mensaje)";
+    </script>
 
     <script defer src="~/App/Departamentos/Grid.js"></script>
 

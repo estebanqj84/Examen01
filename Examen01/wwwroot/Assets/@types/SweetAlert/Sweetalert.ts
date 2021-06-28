@@ -23,6 +23,7 @@ interface ISwalPromiseReturnComfirm {
 }
 
 interface ISwal {
+    then(arg0: (result: any) => void);
     mixin(obj?: Imixin):ISwal;
     fire(obj: { icon?: "success" | "error" | "warning", title?: string }):Promise<void>;
     fire(titulo?: string, Mensaje?: string, tipo?: "success" | "error" | "warning"): Promise<void>;

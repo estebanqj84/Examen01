@@ -1,5 +1,4 @@
-﻿CREATE PROCEDURE [dbo].[DepartamentosInsertar]
-	@IdDepartamento INT,
+﻿CREATE PROCEDURE [dbo].[DepartamentosInsertar]	
 	@Descripcion VARCHAR(250),
 	@Ubicacion VARCHAR(250),
 	@Estado BIT
@@ -12,16 +11,16 @@ AS
 
    INSERT INTO Departamentos
    (
-	  Id_Departamento,
+	  
       Descripcion,
 	  Ubicacion,
 	 Estado)
    VALUES
    (
-     @IdDepartamento,
-	 @Descripcion,
-     @Ubicacion,
-	@Estado
+     
+	 @Descripcion
+    , @Ubicacion
+	,@Estado
    )
 
    COMMIT TRANSACTION TRASA
